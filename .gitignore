@@ -1,0 +1,14 @@
+# Local user theme artifacts
+codex-image-skin/assets/theme-reference.png
+codex-image-skin/assets/backups/
+codex-image-skin/assets/theme.generated.css
+codex-image-skin/assets/theme.generated.json
+
+# Runtime state and verification output
+*.log
+*.png
+!tests/fixtures/.gitkeep
+
+# Local Codex and editor state
+.codex/
+.vscode/
