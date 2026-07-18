@@ -1,0 +1,4 @@
+interface:
+  display_name: "Codex Image Skin"
+  short_description: "Generate a reversible Codex theme from a local image"
+  default_prompt: "Use $codex-image-skin to turn my local image into a safe, reversible Codex desktop theme."
