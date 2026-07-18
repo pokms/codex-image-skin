@@ -1,0 +1,136 @@
+:root.codex-image-skin {
+  color-scheme: light !important;
+  --image-skin-accent: #5f9ed6;
+  --image-skin-ink: #193a5a;
+  --image-skin-surface: #eef6fd;
+  --image-skin-overlay: rgba(24, 65, 111, .92);
+  --image-skin-hero-position: right center;
+  --image-skin-line: color-mix(in srgb, var(--image-skin-accent) 34%, transparent);
+  --image-skin-shadow: color-mix(in srgb, var(--image-skin-ink) 16%, transparent);
+  --codex-base-accent: var(--image-skin-accent) !important;
+  --codex-base-ink: var(--image-skin-ink) !important;
+  --codex-base-surface: var(--image-skin-surface) !important;
+  --color-accent-blue: var(--image-skin-accent) !important;
+  --color-accent-purple: var(--image-skin-accent) !important;
+  --color-background-accent: color-mix(in srgb, var(--image-skin-accent) 18%, white) !important;
+  --color-background-accent-active: color-mix(in srgb, var(--image-skin-accent) 24%, white) !important;
+  --color-background-accent-hover: color-mix(in srgb, var(--image-skin-accent) 20%, white) !important;
+  --color-background-button-primary: var(--image-skin-accent) !important;
+  --color-background-panel: var(--image-skin-surface) !important;
+  --color-background-surface: var(--image-skin-surface) !important;
+  --color-border-focus: var(--image-skin-accent) !important;
+  --color-icon-accent: var(--image-skin-accent) !important;
+  --color-icon-primary: var(--image-skin-ink) !important;
+  --color-text-accent: var(--image-skin-accent) !important;
+  --color-text-foreground: var(--image-skin-ink) !important;
+  --color-text-foreground-secondary: color-mix(in srgb, var(--image-skin-ink) 76%, transparent) !important;
+}
+
+html.codex-image-skin body {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--image-skin-surface) 70%, white), var(--image-skin-surface)) !important;
+  color: var(--image-skin-ink) !important;
+}
+
+html.codex-image-skin aside.app-shell-left-panel {
+  background: color-mix(in srgb, var(--image-skin-surface) 92%, white) !important;
+  border-color: var(--image-skin-line) !important;
+  box-shadow: 10px 0 28px var(--image-skin-shadow) !important;
+}
+
+html.codex-image-skin aside.app-shell-left-panel button:hover,
+html.codex-image-skin aside.app-shell-left-panel [aria-current="page"] {
+  background: color-mix(in srgb, var(--image-skin-accent) 16%, transparent) !important;
+}
+
+html.codex-image-skin main.main-surface {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--image-skin-surface) 72%, white), var(--image-skin-surface)) !important;
+  border-color: var(--image-skin-line) !important;
+}
+
+#codex-image-skin-chrome {
+  position: fixed;
+  z-index: 31;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.image-skin-label {
+  position: absolute;
+  left: 24px;
+  top: 8px;
+  display: none;
+  color: var(--image-skin-accent);
+  font: 500 14px/1.2 system-ui, sans-serif;
+}
+
+#codex-image-skin-chrome.image-skin-home-shell .image-skin-label { display: block; }
+
+.image-skin-home {
+  --thread-content-max-width: min(950px, calc(100cqw - 44px)) !important;
+  overflow-x: hidden !important;
+}
+
+.image-skin-home .image-skin-hero {
+  position: relative !important;
+  isolation: isolate;
+  width: calc(100% - 44px) !important;
+  max-width: none !important;
+  height: 252px !important;
+  min-height: 252px !important;
+  padding: 0 !important;
+  border: 2px solid color-mix(in srgb, var(--image-skin-accent) 42%, white) !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  background-image: linear-gradient(90deg, var(--image-skin-overlay) 0%, transparent 72%), var(--image-skin-art) !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100%, cover !important;
+  background-position: center, var(--image-skin-hero-position) !important;
+  box-shadow: 0 14px 34px var(--image-skin-shadow) !important;
+}
+
+.image-skin-home .image-skin-hero > div:first-child {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding-left: 38px;
+}
+
+.image-skin-home .image-skin-hero [data-feature="game-source"] {
+  max-width: 54% !important;
+  color: #fff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .38);
+}
+
+.image-skin-home .group\/home-suggestions button {
+  border-color: var(--image-skin-line) !important;
+  background: color-mix(in srgb, var(--image-skin-surface) 88%, white) !important;
+  color: var(--image-skin-ink) !important;
+  box-shadow: 0 8px 18px var(--image-skin-shadow) !important;
+}
+
+.image-skin-home .group\/home-suggestions button > span:first-child > span:first-child,
+html.codex-image-skin button[class~="bg-token-foreground"] {
+  background: var(--image-skin-accent) !important;
+  color: #fff !important;
+}
+
+html.codex-image-skin .composer-surface-chrome {
+  border-color: var(--image-skin-line) !important;
+  background: color-mix(in srgb, var(--image-skin-surface) 88%, white) !important;
+  box-shadow: 0 10px 25px var(--image-skin-shadow) !important;
+}
+
+html.codex-image-skin .ProseMirror {
+  color: var(--image-skin-ink) !important;
+  caret-color: var(--image-skin-accent) !important;
+}
+
+@media (max-width: 900px) {
+  .image-skin-home .image-skin-hero {
+    width: calc(100% - 28px) !important;
+    height: 224px !important;
+    min-height: 224px !important;
+  }
+
+  .image-skin-home .image-skin-hero [data-feature="game-source"] { max-width: 66% !important; }
+}
